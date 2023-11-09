@@ -1,0 +1,39 @@
+@import '../styles/variables.scss';
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+html,
+body {
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+a,
+ul {
+  text-decoration: none;
+  list-style-type: none;
+}
+
+a {
+  color: inherit;
+}
+
+h3, li {
+  color: $text-dark;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  color: $text-light;
+}
