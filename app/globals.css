@@ -1,0 +1,37 @@
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+html,
+body {
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+a,
+ul {
+  text-decoration: none;
+  list-style-type: none;
+}
+
+a {
+  color: inherit;
+}
+
+h3, li {
+  color: #1d3e43;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  color: #58575d;
+}/*# sourceMappingURL=globals.css.map */
