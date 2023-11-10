@@ -5,6 +5,7 @@ const Schedules = () => {
   return (
     <section className={styles.schedule__container}>
       <div className={styles.schedule}>
+
         <h3>Schedules</h3>
         <p>
           With Kln Wash, you have the flexibility to schedule your laundry
@@ -48,18 +49,8 @@ const Schedules = () => {
             </p>
           </div>
         </div>
-        <Image
-          src="/landing/arrow-down.png"
-          alt="arrow"
-          height={72.9}
-          width={163.5}
-        />
-        <Image
-          src="/landing/arrow-up.png"
-          alt="arrow"
-          height={72.9}
-          width={163.5}
-        />
+        <Image src='/landing/arrow-down.png' alt="arrow" height={72.9} width={163.5}/>
+        <Image src='/landing/arrow-up.png' alt="arrow" height={72.9} width={163.5}/>
       </div>
     </section>
   );

@@ -7,12 +7,19 @@
 
   .section,
   .section__reverse {
+    position: relative;
     max-width: 1440px;
     margin: 0 auto;
     padding: 0 16.2rem;
     display: flex;
     align-items: center;
     gap: 5.4rem;
+
+    .star {
+      position: absolute;
+      top: 0;
+      transform: translate(50%, 50%);
+    }
 
     &__details {
       width: 50%;
