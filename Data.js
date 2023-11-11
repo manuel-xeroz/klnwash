@@ -87,7 +87,7 @@ export const FAQ = [
   {
     id: "first",
     question: "How do I sign up",
-    answer: "Make I spell everthing out for you?",
+    answer: "Make I spell everything out for you?",
   },
   {
     id: "second",

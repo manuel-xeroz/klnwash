@@ -1,0 +1,84 @@
+@import "../../../styles/variables.scss";
+
+.schedule__container {
+  width: 100%;
+  background-color: $bg-primary;
+  margin-bottom: 10rem;
+
+  .schedule {
+    max-width: 1116px;
+    margin: 0 auto;
+    background-color: $bg-secondary;
+    border-radius: 3.2rem;
+    padding: 3.2rem;
+    position: relative;
+
+    h3 {
+      text-align: center;
+      font-weight: 500;
+      font-size: 3.2rem;
+      margin-bottom: 2.4rem;
+    }
+
+    &__text {
+      text-align: center;
+      font-weight: 400;
+      font-size: 2rem;
+      margin-bottom: 2.4rem;
+      width: 55%;
+      margin: auto;
+    }
+
+    .details {
+      display: flex;
+      align-items: center;
+
+      &__left {
+        display: flex;
+        flex-direction: column;
+        width: 20%;
+        flex: 1;
+
+        p {
+          font-size: 1.8rem;
+          font-weight: 400;
+        }
+      }
+
+      &__middle {
+        flex: 1.5;
+        position: relative;
+        height: 34.6rem;
+        width: 46.3rem;
+      }
+
+      &__right {
+        flex: 1;
+        display: flex;
+        align-items: flex-end;
+        width: 20%;
+        flex-direction: column;
+
+        p {
+          font-size: 1.8rem;
+          font-weight: 400;
+          text-align: right;
+        }
+      }
+    }
+
+    .arrow__down {
+      position: absolute;
+      top: 18%;
+      left: 0;
+      transform: translate(50%, 50%);
+    }
+
+    .arrow__up {
+      position: absolute;
+      bottom: 10%;
+      right: 33%;
+      transform: translate(50%, 50%);
+    }
+  }
+}

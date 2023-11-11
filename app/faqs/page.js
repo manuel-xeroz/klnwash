@@ -1,5 +1,5 @@
-import Accordion from '@/components/Accordion/Accordion'
-import FaqHero from '@/components/FaqHero/FaqHero'
+import Accordion from '@/components/FAQ/Accordion/Accordion'
+import FaqHero from '@/components/FAQ/FaqHero/FaqHero'
 import React, { Fragment } from 'react'
 
 const page = () => {

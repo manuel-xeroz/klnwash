@@ -1,0 +1,83 @@
+@import "../../../styles/variables.scss";
+
+.about__hero__container {
+  width: 100%;
+  background-color: $bg-primary;
+  padding-top: 19.2rem;
+  margin-bottom: 10rem;
+
+  .about__hero {
+    max-width: 1116px;
+    margin: 0 auto;
+    padding: 6.4rem;
+    border-radius: 6.4rem;
+    background-color: $bg-secondary;
+    height: 44.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__left {
+      .texts {
+        display: flex;
+        gap: 12px;
+        margin-bottom: 2.4rem;
+
+        h3 {
+          font-size: 4.8rem;
+          font-weight: 600;
+        }
+
+        .us {
+          color: #ffa401;
+        }
+      }
+    }
+
+    .images {
+      width: 60%;
+      height: 100%;
+      position: relative;
+
+      .illustration {
+        position: relative;
+        width: 57rem;
+        height: 38.5rem;
+        position: absolute;
+        top: -60%;
+        right: 48%;
+        transform: translate(50%, 50%);
+      }
+
+      .shield {
+        position: relative;
+        height: 17rem;
+        width: 17rem;
+        position: absolute;
+        left: -18%;
+        top: 15%;
+        transform: translate(50%, 50%);
+      }
+
+      .star {
+        position: relative;
+        height: 6.4rem;
+        width: 6.4rem;
+        position: absolute;
+        top: -15%;
+        left: 25%;
+        transform: translate(50%, 50%);
+      }
+
+      .calendar {
+        position: relative;
+        height: 7.65rem;
+        width: 7.65rem;
+        position: absolute;
+        right: 10%;
+        top: -5%;
+        transform: translate(50%, 50%);
+      }
+    }
+  }
+}

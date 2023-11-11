@@ -1,0 +1,50 @@
+@import "../../../styles/variables.scss";
+
+.advantage__container {
+  width: 100%;
+  background-color: $bg-primary;
+  margin-bottom: 6.4rem;
+
+  .advantage {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 16.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5.4rem;
+
+    .comfort__container,
+    .vision__container {
+      display: flex;
+      align-items: center;
+      gap: 4rem;
+
+      .comfort__texts {
+        width: 55%;
+
+        h3 {
+          font-weight: 500;
+          font-size: 3.2rem;
+          margin-bottom: 2.4rem;
+        }
+
+        p {
+          font-weight: 400;
+          font-size: 2.2rem;
+        }
+      }
+
+      .comfort__image {
+        width: 38.2rem;
+        height: 55.5rem;
+        position: relative;
+      }
+    }
+
+    .vision__container {
+      .mission {
+        margin-bottom: 2.4rem;
+      }
+    }
+  }
+}
