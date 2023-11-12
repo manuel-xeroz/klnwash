@@ -1,0 +1,42 @@
+@import "../../../styles/variables.scss";
+
+.terms__container {
+  width: 100%;
+  background-color: $bg-primary;
+  margin-bottom: 16.7rem;
+
+  .terms {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 16.2rem;
+
+    h3,
+    p {
+      font-size: 2rem;
+
+      margin-bottom: 3.4rem;
+    }
+
+    h3 {
+      font-weight: 600;
+    }
+
+    &__header {
+      font-size: 3.2rem !important;
+    }
+
+    p {
+      font-weight: 400;
+    }
+
+    ul {
+      margin-bottom: 3.4rem;
+      text-decoration: dotted !important;
+      list-style-type: disc;
+      margin-left: 35px;
+      li {
+        font-size: 2rem;
+      }
+    }
+  }
+}

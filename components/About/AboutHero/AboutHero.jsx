@@ -19,28 +19,16 @@ const AboutHero = () => {
         </div>
         <div className={styles.images}>
           <div className={styles.illustration}>
-            <Image
-              src="/about/hero-image.png"
-              alt="illustration"
-              fill
-            />
+            <Image src="/about/hero-image.png" alt="illustration" fill />
           </div>
           <div className={styles.shield}>
-            <Image
-              src="/about/shield.png"
-              alt="shield"
-              fill
-            />
+            <Image src="/about/shield.png" alt="shield" fill />
           </div>
           <div className={styles.star}>
-            <Image src="/about/star.png" alt="star" height={50} width={50} />
+            <Image src="/about/star.png" alt="star" fill />
           </div>
           <div className={styles.calendar}>
-            <Image
-              src="/about/calendar.png"
-              alt="calendar"
-              fill
-            />
+            <Image src="/about/calendar.png" alt="calendar" fill />
           </div>
         </div>
       </div>

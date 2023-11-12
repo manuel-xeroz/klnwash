@@ -1,0 +1,40 @@
+@import "../../../styles/variables.scss";
+
+.hero__container {
+  width: 100%;
+  background-color: $bg-primary;
+  margin-bottom: 22.4rem;
+  padding-top: 19.2rem;
+
+  .hero {
+    max-width: 1116px;
+    margin: 0 auto;
+    padding: 6.4rem;
+    border-radius: 6.4rem;
+    background-color: $bg-secondary;
+    height: 44.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__text {
+      h3 {
+        font-size: 3.6rem;
+        font-weight: 600;
+        margin-bottom: 2.4rem;
+      }
+    }
+
+    &__image {
+      position: relative;
+      width: 50%;
+      height: 40.2rem;
+      width: 31.2rem;
+
+      .list__image {
+        position: absolute;
+        transform: translate(-15%, 15%);
+      }
+    }
+  }
+}

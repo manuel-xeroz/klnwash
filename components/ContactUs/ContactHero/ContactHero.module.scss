@@ -1,0 +1,84 @@
+@import "../../../styles/variables.scss";
+
+.contact__container {
+  width: 100%;
+  background-color: $bg-primary;
+  margin-bottom: 5.3rem;
+  padding-top: 19.2rem;
+
+  .contact {
+    max-width: 1116px;
+    margin: 0 auto;
+    background-color: $bg-secondary;
+    padding: 6.4rem;
+    border-radius: 6.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 448px;
+
+    &__left {
+      &__text {
+        display: flex;
+        gap: 12px;
+
+        h3 {
+          font-weight: 600;
+          font-size: 4.8rem;
+          margin-bottom: 2.4rem;
+        }
+
+        .us {
+          color: #ffa401;
+        }
+      }
+    }
+
+    &__right {
+      width: 50%;
+      min-width: 450px;
+      height: 32rem;
+      position: relative;
+
+      .speech {
+        position: relative;
+        height: 19.7rem;
+        width: 30.5rem;
+        position: absolute;
+        top: -12%;
+        left: -15%;
+        transform: translate(50%, 50%);
+      }
+
+      .call {
+        position: relative;
+        height: 11.9rem;
+        width: 11.9rem;
+        position: absolute;
+        bottom: 27%;
+        left: -9%;
+        transform: translate(50%, 50%);
+      }
+
+      .star {
+        position: relative;
+        height: 6.4rem;
+        width: 6.4rem;
+        position: absolute;
+        top: -17%;
+        left: 13%;
+        transform: translate(50%, 50%);
+      }
+
+      .message {
+        position: relative;
+        height: 7.6rem;
+        width: 7.6rem;
+        position: absolute;
+        right: 23%;
+        top: 10%;
+        transform: translate(50%, 50%);
+      }
+    }
+  }
+}
