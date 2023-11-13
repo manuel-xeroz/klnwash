@@ -60,6 +60,11 @@
             font-size: 1.8rem;
             font-weight: 500;
             text-transform: capitalize;
+            padding: 3px 0;
+
+            &.on {
+              border-bottom: 3px solid $bg-tertiary;
+            }
           }
         }
       }
@@ -108,26 +113,26 @@
     .line {
       height: 1px;
       outline: none;
-      background-color:#58575D;
+      background-color: #58575d;
       border: none;
       margin: 2.4rem 0 2.4rem 0;
     }
 
     &__bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      p {
+        font-weight: 400;
+        font-size: 1.6rem;
+      }
+
+      .socials {
         display: flex;
         align-items: center;
-        justify-content: space-between;
-
-        p {
-            font-weight: 400;
-            font-size: 1.6rem;
-        }
-
-        .socials {
-            display: flex;
-            align-items: center;
-            gap: 6.4rem;
-        }
+        gap: 6.4rem;
+      }
     }
   }
 }

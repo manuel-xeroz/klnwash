@@ -1,0 +1,118 @@
+@import "../../../styles/variables.scss";
+
+.form__modal {
+  .backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #484848;
+    opacity: .8;
+    z-index: 1000;
+  }
+
+  .modal__container {
+    background-color: $bg-primary;
+    border-radius: 24px;
+    width: 588px;
+    height: 452px;
+    padding: 24px 0;
+    position: relative;
+    position: fixed;
+    z-index: 10000;
+    transform: translate(40%, -100%);
+    overflow: scroll;
+
+    h3 {
+      padding-top: 24px;
+      text-align: center;
+      font-size: 2.4rem;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    p {
+      font-weight: 400;
+      font-size: 1.8rem;
+
+      text-align: center;
+      width: 75%;
+      margin: auto;
+      margin-bottom: 2.4rem;
+    }
+
+    form {
+      width: 75%;
+      margin: auto;
+
+      .form__name {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2.4rem;
+
+        label {
+          font-size: 1.4rem;
+          margin-bottom: 6px;
+        }
+
+        input {
+          padding: 2rem;
+          font-size: 1.4rem;
+          font-weight: 500;
+          outline: none;
+          border: none;
+          border: 1px solid #afbaca;
+          border-radius: 6px;
+          color: $text-light;
+        }
+      }
+
+      .form__mail {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2.4rem;
+
+        label {
+          font-size: 1.4rem;
+          margin-bottom: 6px;
+        }
+
+        &__input {
+          border: 1px solid #afbaca;
+
+          border-radius: 6px;
+          display: flex;
+          align-items: center;
+
+          .envelop {
+            border-right: 1px solid #afbaca;
+            padding-right: 5px;
+            margin-right: 5px;
+            margin-left: 2rem;
+            display: flex;
+            align-items: center;
+          }
+
+          input {
+            padding: 2rem;
+            padding-left: 3px;
+            font-size: 1.4rem;
+            font-weight: 500;
+            width: 80%;
+            outline: none;
+            border: none;
+            color: $text-light;
+          }
+        }
+      }
+    }
+
+    .cancel {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      cursor: pointer;
+    }
+  }
+}

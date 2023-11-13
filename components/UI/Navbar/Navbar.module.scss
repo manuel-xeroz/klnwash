@@ -7,7 +7,7 @@
   background-color: $bg-primary;
   position: fixed;
   top: 0;
-  z-index: 1000;
+  z-index: 100;
 
   .header {
     margin: 0 auto;
@@ -52,6 +52,12 @@
           font-size: 1.8rem;
           font-weight: 500;
           text-transform: capitalize;
+
+          padding: 3px 0;
+
+          &.on {
+            border-bottom: 3px solid $bg-tertiary;
+          }
         }
       }
     }

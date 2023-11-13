@@ -1,17 +1,26 @@
+'use client'
+
 import React from "react";
 import styles from "./Navbar.module.scss";
 import Image from "next/image";
 import Link from "next/link";
 import { navLink } from "@/Data";
 import Button from "../Button";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
+  const pathname = usePathname();
   return (
     <header className={styles.header__container}>
       <div className={styles.header}>
         <Link href="/" className={styles.header__brand}>
           <div className={styles.logo__container}>
-            <Image src='/landing/logo.png' alt='logo' fill className={styles.logo}/>
+            <Image
+              src="/landing/logo.png"
+              alt="logo"
+              fill
+              className={styles.logo}
+            />
           </div>
           <h3 className={styles.brand__name}>Klnwash</h3>
         </Link>
@@ -19,8 +28,15 @@ const Navbar = () => {
         <div className={styles.header__links}>
           <ul className={styles.links}>
             {navLink.map(({ link, name }) => (
-              <li key={name} >
-                <Link href={link} className={styles.link}>{name}</Link>
+              <li key={name}>
+                <Link
+                  href={link}
+                  className={`${styles.link} ${
+                    pathname == link ? `${styles.on}` : ""
+                  }`}
+                >
+                  {name}
+                </Link>
               </li>
             ))}
           </ul>

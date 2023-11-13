@@ -1,10 +1,14 @@
+"use client";
+
 import Link from "next/link";
 import styles from "./Footer.module.scss";
 import Image from "next/image";
 import { footerLink1, footerLink2 } from "@/Data";
 import Button from "../Button";
+import { usePathname } from "next/navigation";
 
 const Footer = () => {
+  const pathname = usePathname();
   return (
     <footer className={styles.footer__container}>
       <div className={styles.footer}>
@@ -44,7 +48,12 @@ const Footer = () => {
             <ul className={styles.link__items}>
               {footerLink1.map(({ name, link }) => (
                 <li key={name}>
-                  <Link href={link} className={styles.link}>
+                  <Link
+                    href={link}
+                    className={`${styles.link} ${
+                      pathname == link ? `${styles.on}` : ""
+                    }`}
+                  >
                     {name}
                   </Link>
                 </li>
@@ -54,7 +63,12 @@ const Footer = () => {
             <ul className={styles.link__items}>
               {footerLink2.map(({ name, link }) => (
                 <li key={name}>
-                  <Link href={link} className={styles.link}>
+                  <Link
+                    href={link}
+                    className={`${styles.link} ${
+                      pathname == link ? `${styles.on}` : ""
+                    }`}
+                  >
                     {name}
                   </Link>
                 </li>
