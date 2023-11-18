@@ -10,12 +10,9 @@ const AboutHero = () => {
             <h3>About</h3>
             <h3 className={styles.us}>Us</h3>
           </span>
-          <Image
-            src="/landing/zigzag.png"
-            alt="design"
-            height={19}
-            width={221}
-          />
+          <div className={styles.zigzag}>
+            <Image src="/landing/zigzag.png" alt="design" fill />
+          </div>
         </div>
         <div className={styles.images}>
           <div className={styles.illustration}>

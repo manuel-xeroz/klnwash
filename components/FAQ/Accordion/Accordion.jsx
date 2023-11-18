@@ -13,7 +13,7 @@ const Accordion = () => {
           <div className={styles.question} onClick={() => setFaq(id)}>
             <div className={styles.sign}>
               {faq === id ? (
-                <Image src="/faq/minus-circle.png" alt="plus" fill />
+                <Image src="/faq/minus-circle.png" alt="minus" fill />
               ) : (
                 <Image src="/faq/plus-circle.png" alt="plus" fill />
               )}

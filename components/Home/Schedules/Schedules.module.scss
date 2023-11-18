@@ -1,17 +1,41 @@
 @import "../../../styles/variables.scss";
+@import "../../../styles/responsive.scss";
 
 .schedule__container {
   width: 100%;
   background-color: $bg-primary;
   margin-bottom: 10rem;
 
+  @include xl {
+    margin-bottom: 9rem;
+  }
+
+  
+
   .schedule {
     max-width: 1116px;
+
+    margin-left: 16.2rem;
+    margin-right: 16.2rem;
     margin: 0 auto;
-    background-color: $bg-secondary;
+    background-color: $bg-grey;
     border-radius: 3.2rem;
     padding: 3.2rem;
     position: relative;
+
+    @include xl {
+      margin: 0 10rem;
+      max-width: 1240px;
+    }
+
+    @include md {
+      margin: 0 6rem;
+    }
+
+    @include sm {
+      margin: 0 2.4rem;
+      padding: 1.6rem;
+    }
 
     h3 {
       text-align: center;
@@ -27,29 +51,53 @@
       margin-bottom: 2.4rem;
       width: 55%;
       margin: auto;
+
+      @include md {
+        width: 90%;
+      }
+
+      @include sm {
+        width: 100%;
+      }
     }
 
     .details {
       display: flex;
       align-items: center;
 
+      @include md {
+        flex-direction: column;
+      }
+
       &__left {
         display: flex;
         flex-direction: column;
         width: 20%;
-        flex: 1;
+
+        @include md {
+          width: 100%;
+          align-items: center;
+        }
 
         p {
           font-size: 1.8rem;
           font-weight: 400;
+
+          @include md {
+            text-align: center;
+          }
         }
       }
 
       &__middle {
-        flex: 1.5;
         position: relative;
         height: 34.6rem;
         width: 46.3rem;
+
+        @include sm {
+          width: 90%;
+          height: 21.2rem;
+        }
       }
 
       &__right {
@@ -59,26 +107,54 @@
         width: 20%;
         flex-direction: column;
 
+        @include md {
+          width: 100%;
+          align-items: center;
+          margin-top: -5rem;
+        }
+
         p {
           font-size: 1.8rem;
           font-weight: 400;
           text-align: right;
+
+          @include md {
+            text-align: center;
+          }
+
+          @include sm {
+            padding-bottom: 2.4rem;
+          }
         }
       }
     }
 
     .arrow__down {
+      position: relative;
       position: absolute;
+      height: 7.2rem;
+      width: 16.3rem;
       top: 18%;
       left: 0;
       transform: translate(50%, 50%);
+
+      @include md {
+        display: none;
+      }
     }
 
     .arrow__up {
+      position: relative;
       position: absolute;
+      height: 4rem;
+      width: 16.3rem;
       bottom: 10%;
       right: 33%;
       transform: translate(50%, 50%);
+
+      @include md {
+       display: none;
+      }
     }
   }
 }

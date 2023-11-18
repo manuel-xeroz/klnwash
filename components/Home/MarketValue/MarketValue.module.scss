@@ -1,9 +1,14 @@
 @import "../../../styles/variables.scss";
+@import "../../../styles/responsive.scss";
 
 .section__container {
   width: 100%;
   background-color: $bg-primary;
   margin-bottom: 10.5rem;
+
+  @include xl {
+    margin-bottom: 9rem;
+  }
 
   .section,
   .section__reverse {
@@ -15,6 +20,19 @@
     align-items: center;
     gap: 5.4rem;
 
+    @include xl {
+      padding: 0 10rem;
+    }
+
+    @include md {
+      padding: 0 6rem;
+      flex-direction: column-reverse;
+    }
+
+    @include sm {
+      padding: 0 2.4rem;
+    }
+
     .star {
       position: absolute;
       top: 0;
@@ -24,20 +42,49 @@
     &__details {
       width: 50%;
 
+      @include md {
+        width: 100%;
+      }
+
       .zigzag {
+        position: relative;
         margin-top: 6.8rem;
+        height: 1.9rem;
+        width: 22.1rem;
+
+        @include lg {
+          margin-top: 4rem;
+          width: 18rem;
+        }
+
+        @include md {
+          margin: auto;
+          margin-top: 5rem;
+        }
       }
 
       h3 {
         font-size: 3.2rem;
         font-weight: 500;
         margin-bottom: 2.4rem;
+
+        @include md {
+          text-align: center;
+        }
+
+        @include sm {
+          line-height: normal;
+        }
       }
 
       .desc {
         font-size: 2rem;
         font-weight: 500;
         margin-bottom: 2.4rem;
+
+        @include sm {
+          text-align: center;
+        }
       }
 
       .points {
@@ -60,10 +107,28 @@
       align-items: center;
       justify-content: center;
 
+      @include md {
+        width: 70%;
+      }
+
+      @include sm {
+        width: 100%;
+      }
+
       .image {
         height: 62.1rem;
         width: 19rem;
         z-index: 1;
+
+        @include lg {
+          height: 55rem;
+          width: 36.2rem;
+          max-width: 36.2rem;
+        }
+
+        @include sm {
+          height: 41.3rem;
+        }
       }
 
       // .phone__overlay {
@@ -82,5 +147,14 @@
 
   .section__reverse {
     flex-direction: row-reverse;
+
+    @include md {
+      padding: 0 6rem;
+      flex-direction: column-reverse;
+    }
+
+    @include sm {
+      padding: 0 2.4rem;
+    }
   }
 }

@@ -18,13 +18,9 @@ const Services = () => {
             delivery services every day of the week. Save both money and time
             with our reliable solutions.
           </h3>
-          <Image
-            src="/landing/zigzag.png"
-            alt="design"
-            height={19}
-            width={221}
-            className={styles.zigzag}
-          />
+          <div className={styles.zigzag}>
+            <Image src="/landing/zigzag.png" alt="design" fill />
+          </div>
           <p>
             Our vast network of connected laundry businesses ensures
             high-quality service and convenience. We collect your dirty laundry
@@ -34,7 +30,7 @@ const Services = () => {
             trusted laundry partner.
           </p>
 
-          <div className={styles.services__overlay}></div>
+          {/* <div className={styles.services__overlay}></div> */}
         </div>
       </div>
     </section>

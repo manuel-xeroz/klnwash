@@ -1,19 +1,31 @@
 @import "../../../styles/variables.scss";
+@import "../../../styles/responsive.scss";
 
 .terms__container {
   width: 100%;
   background-color: $bg-primary;
   margin-bottom: 16.7rem;
 
+  @include xl {
+    margin-bottom: 15rem;
+  }
+
   .terms {
     max-width: 1440px;
     margin: 0 auto;
     padding: 0 16.2rem;
 
+    @include xl {
+      padding: 0 10rem;
+    }
+
+    @include md {
+      padding: 0 6rem;
+    }
+
     h3,
     p {
       font-size: 2rem;
-
       margin-bottom: 3.4rem;
     }
 

@@ -1,4 +1,5 @@
 @import "../../../styles/variables.scss";
+@import "../../../styles/responsive.scss";
 
 .header__container {
   width: 100%;
@@ -9,6 +10,22 @@
   top: 0;
   z-index: 100;
 
+  @include xl {
+    height: 150px;
+  }
+
+  @include lg {
+    height: 120px;
+  }
+
+  @include md {
+    height: 90px;
+  }
+
+  @include sm {
+    height: 80px;
+  }
+
   .header {
     margin: 0 auto;
     max-width: 1440px;
@@ -16,7 +33,26 @@
     justify-content: space-between;
     align-items: center;
     padding: 6.4rem 16.2rem;
-    
+    border-bottom: 1px solid $bg-secondary;
+
+    @include xl {
+      height: 150px;
+      padding: 6rem 10rem;
+    }
+
+    @include lg {
+      height: 120px;
+    }
+
+    @include md {
+      height: 90px;
+      padding: 2rem 6rem;
+    }
+
+    @include sm {
+      height: 80px;
+      padding: 1.6rem 2.4rem;
+    }
 
     &__brand {
       display: flex;
@@ -27,6 +63,16 @@
         width: 6.3rem;
         position: relative;
 
+        @include md {
+          height: 4.1rem;
+          width: 4rem;
+        }
+
+        @include sm {
+          height: 3.6rem;
+          width: 3.5rem;
+        }
+
         .logo {
           width: 100%;
         }
@@ -35,6 +81,14 @@
       .brand__name {
         font-size: 3.2rem;
         font-weight: 500;
+
+        @include md {
+          font-size: 2.2rem;
+        }
+
+        @include sm {
+          font-size: 1.8rem;
+        }
       }
     }
 
@@ -43,10 +97,38 @@
       align-items: center;
       gap: 3.2rem;
 
+      @include md {
+        flex-direction: column;
+        background-color: $bg-secondary;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: -100%;
+        z-index: 10;
+        transition: all 0.5s;
+        padding: 6.4rem 0rem;
+        gap: 4.8rem;
+      }
+
+      &.active {
+        @include md {
+          left: 0;
+        }
+      }
+
       .links {
         display: flex;
         align-items: center;
         gap: 3.2rem;
+
+        @include md {
+          flex-direction: column;
+          width: 80%;
+          margin-top: 10rem;
+          gap: 4.8rem;
+        }
 
         .link {
           font-size: 1.8rem;
@@ -59,6 +141,23 @@
             border-bottom: 3px solid $bg-tertiary;
           }
         }
+      }
+    }
+
+    .hamburger {
+      display: none;
+
+      @include md {
+        display: initial;
+        z-index: 1000;
+        position: absolute;
+        top: 25px;
+        right: 60px;
+      }
+
+      @include sm {
+        top: 22px;
+        right: 24px;
       }
     }
   }

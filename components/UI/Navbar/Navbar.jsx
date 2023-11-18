@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import React from "react";
 import styles from "./Navbar.module.scss";
@@ -7,9 +7,20 @@ import Link from "next/link";
 import { navLink } from "@/Data";
 import Button from "../Button";
 import { usePathname } from "next/navigation";
+import { useState } from "react";
 
 const Navbar = () => {
   const pathname = usePathname();
+  const [click, setClick] = useState(false);
+
+  const HandleClick = () => {
+    setClick(!click);
+  };
+
+  const handleStyle = () => {
+    setClick(false);
+  };
+  
   return (
     <header className={styles.header__container}>
       <div className={styles.header}>
@@ -25,7 +36,11 @@ const Navbar = () => {
           <h3 className={styles.brand__name}>Klnwash</h3>
         </Link>
 
-        <div className={styles.header__links}>
+        <div
+          className={`${styles.header__links} ${
+            click ? `${styles.active}` : ""
+          }`}
+        >
           <ul className={styles.links}>
             {navLink.map(({ link, name }) => (
               <li key={name}>
@@ -34,6 +49,7 @@ const Navbar = () => {
                   className={`${styles.link} ${
                     pathname == link ? `${styles.on}` : ""
                   }`}
+                  onClick={handleStyle}
                 >
                   {name}
                 </Link>
@@ -41,7 +57,27 @@ const Navbar = () => {
             ))}
           </ul>
 
-          <Button className="btn">get started</Button>
+          <Button className="phone">get started</Button>
+        </div>
+
+        <div className={styles.hamburger} onClick={HandleClick}>
+          {click ? (
+            <Image
+              src="/landing/cancel-nav.png"
+              alt="cancel"
+              height={40}
+              width={40}
+              className={styles.cancel}
+            />
+          ) : (
+            <Image
+              src="/landing/hamburger.png"
+              alt="menu"
+              height={32}
+              className={styles.menu}
+              width={32}
+            />
+          )}
         </div>
       </div>
     </header>

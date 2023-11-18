@@ -1,9 +1,18 @@
 @import "../../../styles/variables.scss";
+@import "../../../styles/responsive.scss";
 
 .effectiveness__container {
   width: 100%;
   background-color: $bg-primary;
   margin-bottom: 10rem;
+
+  @include xl {
+    margin-bottom: 9rem;
+  }
+
+  @include md {
+    margin-bottom: 11rem;
+  }
 
   .effectiveness {
     max-width: 1116px;
@@ -11,6 +20,15 @@
     background-color: $bg-secondary;
     border-radius: 6.4rem;
     padding: 6.4rem;
+
+    @include xl {
+      margin: 0 10rem;
+      max-width: 1240px;
+    }
+
+    @include md {
+      margin: 0 6rem;
+    }
 
     .title {
       font-weight: 500;
@@ -26,11 +44,17 @@
       align-items: center;
       gap: 5.2rem;
 
-      
+      @include md {
+        flex-direction: column;
+      }
       
 
       .texts {
         width: 48%;
+
+        @include md {
+          width: 100%;
+        }
 
         h3 {
           font-weight: 500;
@@ -55,6 +79,10 @@
         height: 27.5rem;
         width: 21.8rem;
         margin-left: 10rem;
+
+        @include md {
+          margin-left: 0;
+        }
       }
 
       .heart {
@@ -62,6 +90,11 @@
         width: 24.5rem;
         margin-right: 21.9rem;
         margin-left: 3rem;
+
+        @include md {
+          margin-left: 0;
+          margin-right: 0;
+        }
       }
 
 
@@ -69,6 +102,11 @@
 
     .effectiveness__item2 {
         margin-top: 4.5rem;
+
+        @include md {
+          flex-direction: column-reverse;
+        }
+        
     }
   }
 }

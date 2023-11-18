@@ -7,12 +7,13 @@ const Hero = () => {
       <div className={styles.hero}>
         <div className={styles.hero__text}>
           <h3>Terms and Condition</h3>
-          <Image
-            src="/landing/zigzag.png"
-            alt="design"
-            height={19}
-            width={221}
-          />
+          <div className={styles.zigzag}>
+            <Image
+              src="/landing/zigzag.png"
+              alt="design"
+              fill
+            />
+          </div>
         </div>
         <div className={styles.hero__image}>
           <Image

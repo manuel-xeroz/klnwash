@@ -43,20 +43,20 @@ const Schedules = () => {
             </p>
           </div>
         </div>
-        <Image
-          src="/landing/arrow-down.png"
-          alt="arrow"
-          height={72.9}
-          width={163.5}
-          className={styles.arrow__down}
-        />
-        <Image
-          src="/landing/arrow-up.png"
-          alt="arrow"
-          height={40.9}
-          width={163.5}
-          className={styles.arrow__up}
-        />
+        <div className={styles.arrow__down}>
+          <Image
+            src="/landing/arrow-down.png"
+            alt="arrow"
+            fill
+          />
+        </div>
+        <div className={styles.arrow__up}>
+          <Image
+            src="/landing/arrow-up.png"
+            alt="arrow"
+            fill
+          />
+        </div>
       </div>
     </section>
   );

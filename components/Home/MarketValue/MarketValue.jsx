@@ -25,13 +25,9 @@ const MarketValue = (props) => {
           ))}
 
           {props.zigzag && (
-            <Image
-              className={styles.zigzag}
-              src={props.zigzag}
-              alt="point"
-              height={19}
-              width={221}
-            />
+            <div className={styles.zigzag}>
+              <Image src={props.zigzag} alt="point" fill />
+            </div>
           )}
         </div>
         <div className={styles.section__image}>

@@ -1,8 +1,10 @@
 @import "../../styles/variables.scss";
+@import '../../styles/responsive.scss';
 
 .btn,
 .form,
-.awesome {
+.awesome,
+.phone {
   border: none;
   background-color: $bg-tertiary;
   padding: 0.8rem 1.2rem;
@@ -22,6 +24,20 @@
     transform: scaleX(1.03);
     background-color: #06833c;
   }
+
+  @include md {
+    .phone {
+      width: 70%;
+      padding: 2.5rem 0;
+    }
+  }
+}
+
+@include md {
+  .phone {
+    width: 70%;
+    padding: 2.5rem 0;
+  }
 }
 
 .form, .awesome {
@@ -32,3 +48,5 @@
 .awesome {
   width: 85%;
 }
+
+

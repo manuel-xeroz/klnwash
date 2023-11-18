@@ -1,10 +1,16 @@
 @import "../../../styles/variables.scss";
+@import "../../../styles/responsive.scss";
 
 .about__hero__container {
   width: 100%;
   background-color: $bg-primary;
   padding-top: 19.2rem;
   margin-bottom: 10rem;
+
+  @include xl {
+    padding-top: 17.5rem;
+    margin-bottom: 9rem;
+  }
 
   .about__hero {
     max-width: 1116px;
@@ -16,6 +22,16 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include xl {
+      margin: 0 10rem;
+      max-width: 1240px;
+    }
+
+    @include md {
+      margin: 0 6rem;
+      flex-direction: column-reverse;
+    }
 
     &__left {
       .texts {
@@ -32,12 +48,24 @@
           color: #ffa401;
         }
       }
+
+      .zigzag {
+        position: relative;
+        height: 1.9rem;
+        width: 22.1rem;
+      }
     }
 
     .images {
       width: 60%;
       height: 100%;
       position: relative;
+
+      @include md {
+        height: 30rem;
+        width: 40rem;
+        min-width: 30rem;
+      }
 
       .illustration {
         position: relative;
@@ -47,6 +75,12 @@
         top: -60%;
         right: 48%;
         transform: translate(50%, 50%);
+
+        @include md {
+          width: 30.2rem;
+          top: -85%;
+          height: 24.2rem;
+        }
       }
 
       .shield {
@@ -57,6 +91,13 @@
         left: -18%;
         top: 15%;
         transform: translate(50%, 50%);
+
+        @include md {
+          width: 7.5rem;
+          top: 5%;
+          left: 3%;
+          height: 7.5rem;
+        }
       }
 
       .star {
@@ -67,6 +108,13 @@
         top: -15%;
         left: 25%;
         transform: translate(50%, 50%);
+
+        @include md {
+          width: 3.1rem;
+          top: -30%;
+          left: 30%;
+          height: 3.1rem;
+        }
       }
 
       .calendar {
@@ -77,6 +125,13 @@
         right: 10%;
         top: -5%;
         transform: translate(50%, 50%);
+
+        @include md {
+          width: 3.7rem;
+          top: -15%;
+          right: 15%;
+          height: 3.7rem;
+        }
       }
     }
   }

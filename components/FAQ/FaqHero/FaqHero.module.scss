@@ -1,9 +1,15 @@
 @import "../../../styles/variables.scss";
+@import "../../../styles/responsive.scss";
 
 .hero__container {
   width: 100%;
   background-color: $bg-primary;
   padding: 19.2rem 0 14.6rem 0;
+
+  @include xl {
+    padding-top: 17.5rem;
+    padding-bottom: 13rem;
+  }
 
   .hero {
     max-width: 1116px;
@@ -15,6 +21,15 @@
     align-items: center;
     justify-content: space-between;
 
+    @include xl {
+      margin: 0 10rem;
+      max-width: 1240px;
+    }
+
+    @include md {
+      margin: 0 6rem;
+    }
+
     .texts {
       h3 {
         font-size: 3.6rem;
@@ -25,12 +40,26 @@
         color: #ffa401;
         margin-bottom: 2.4rem;
       }
+
+      .zigzag {
+        position: relative;
+        height: 1.9rem;
+        width: 22.1rem;
+
+        @include md {
+          width: 18rem;
+        }
+      }
     }
 
     .image {
       position: relative;
       height: 36rem;
       width: 40%;
+
+      @include md {
+        height: 30rem;
+      }
     }
   }
 }

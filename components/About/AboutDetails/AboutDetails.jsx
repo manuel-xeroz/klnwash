@@ -12,6 +12,11 @@ const AboutDetails = () => {
                 Welcome to Kln Wash, where convenience meets excellence in
                 laundry services
               </h3>
+
+              <div className={styles.detail__image_mobile}>
+                <Image src="/about/first-phone.png" alt="phone" fill />
+              </div>
+
               <p>
                 We are a regular home pick-up and delivery service, designed to
                 revolutionize the way you handle your laundry. With our
@@ -28,14 +33,16 @@ const AboutDetails = () => {
               </p>
             </div>
             <div className={styles.detail__image}>
-              <Image
-                src="/about/first-phone.png"
-                alt="phone"
-                fill
-              />
+              <Image src="/about/first-phone.png" alt="phone" fill />
             </div>
           </div>
-          <Image src="/landing/zigzag.png" alt="" height={19} width={221} className={styles.zigzag}/>
+          <Image
+            src="/landing/zigzag.png"
+            alt=""
+            height={19}
+            width={221}
+            className={styles.zigzag}
+          />
         </div>
         <p>
           Our dedicated team takes pride in delivering exceptional service from
@@ -87,7 +94,13 @@ const AboutDetails = () => {
           </p>
         </div>
         <div className={styles.aboutUs}>
-          <Image src="/about/tree.png" alt="tree" height={215} width={212} className={styles.tree}/>
+          <Image
+            src="/about/tree.png"
+            alt="tree"
+            height={215}
+            width={212}
+            className={styles.tree}
+          />
           <h3 className={styles.aboutUs__header}>Environmental impact</h3>
           <p>
             Traditional laundry methods cause a lot of water wastage, energy

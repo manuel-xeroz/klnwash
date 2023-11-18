@@ -9,12 +9,9 @@ const ContactHero = () => {
           <span className={styles.contact__left__text}>
             <h3>Contact</h3> <h3 className={styles.us}>Us</h3>
           </span>
-          <Image
-            src="/landing/zigzag.png"
-            alt="design"
-            width={221}
-            height={19}
-          />
+          <div className={styles.zigzag}>
+            <Image src="/landing/zigzag.png" alt="design" fill />
+          </div>
         </div>
         <div className={styles.contact__right}>
           <div className={styles.speech}>

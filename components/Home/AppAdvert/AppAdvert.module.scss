@@ -1,44 +1,55 @@
 @import "../../../styles/variables.scss";
+@import "../../../styles/responsive.scss";
 
 .advert__container {
   width: 100%;
   margin-bottom: 7.5rem;
   background-color: $bg-primary;
 
+  @include md {
+    margin-bottom: 1.7rem;
+  }
+
   .advert {
     max-width: 1116px;
+
+    margin-left: 16.2rem;
+    margin-right: 16.2rem;
     margin: 0 auto;
     background-color: #06b451;
     border-radius: 32px;
     padding: 6.4rem 3.2rem;
     position: relative;
+    background-image: url("/landing/adbg-right.png"), url("/landing/adbg-left.png");
+    background-repeat: no-repeat, no-repeat;
+    background-position: right, left;
 
-    .overlay__left {
-      position: absolute;
-      background-image: url("/landing/adbg-left.png");
-      background-repeat: no-repeat;
-      background-position: left;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
+    @include xl {
+      max-width: 1240px;
+      margin: 0 10rem;
     }
 
-    .overlay__right {
-        position: absolute;
-      background-image: url("/landing/adbg-right.png");
-      background-repeat: no-repeat;
-      background-position: right;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      right: 4px;
+    @include md {
+      margin: 0 6rem;
     }
+
+    @include sm {
+      margin: 0 2.4rem;
+      padding: 1.6rem;
+      background-image: url("/landing/adbgmo-right.png"), url("/landing/adbgmo-left.png");
+    }
+
+
 
     &__inner {
       text-align: center;
       width: 74%;
       margin: 0 auto;
+      z-index: 1000;
+
+      @include sm {
+        width: 100%;
+      }
 
       h3 {
         font-size: 3.2rem;
@@ -52,6 +63,7 @@
         font-weight: 400;
         margin-bottom: 6rem;
         color: $text-secondary;
+        
       }
 
       .stores {

@@ -27,20 +27,21 @@ const Footer = () => {
             </Link>
 
             <div className={styles.brand__bottom}>
-              <Image
-                src="/landing/apple.png"
-                alt="apple store"
-                width={140}
-                height={55}
-                className={styles.apple}
-              />
-              <Image
-                src="/landing/playstore.png"
-                alt="play store"
-                width={140}
-                height={55}
-                className={styles.apple}
-              />
+              <div className={styles.apple}>
+                <Image
+                  src="/landing/apple.png"
+                  alt="apple store"
+                  fill
+                />
+              </div>
+
+              <div className={styles.playstore}>
+                <Image
+                  src="/landing/playstore.png"
+                  alt="play store"
+                  fill
+                />
+              </div>
             </div>
           </div>
 
@@ -60,7 +61,7 @@ const Footer = () => {
               ))}
             </ul>
 
-            <ul className={styles.link__items}>
+            <ul className={`${styles.link__items} ${styles.link__items_left} `}>
               {footerLink2.map(({ name, link }) => (
                 <li key={name}>
                   <Link

@@ -1,47 +1,172 @@
 @import "../../../styles/variables.scss";
+@import "../../../styles/responsive.scss";
 
 .hero__container {
   width: 100%;
   padding: 19.2rem 0 14.6rem 0;
- 
   box-sizing: border-box;
- 
+
+  @include xl {
+    padding-top: 17.5rem;
+  }
+
   .hero {
-    max-width: 1440px;
+    margin-left: 16.2rem;
+    margin-right: 16.2rem;
     margin: 0 auto;
-    background-size: cover;
-    background-repeat: no-repeat;
+    max-width: 1116px;
     padding-top: 4.9rem;
-    padding-left: 16.2rem;
-    padding-right: 12.8rem;
     position: relative;
     display: flex;
     align-items: center;
     gap: 2rem;
-   
+    background-image: url("/landing/hero-background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+    object-fit: contain;
+    border-radius: 6.4rem;
+
+    @include xl {
+      margin: 0 10rem;
+      max-width: 1240px;
+    }
+
+    @include md {
+      margin: 0 6rem;
+      flex-direction: column;
+      display: block;
+      background-image: url("/landing/mobile-bg.png");
+      background-position: top;
+    }
+
+    @include sm {
+      margin: 0;
+    }
 
     .details {
       padding-left: 6.6rem;
       width: 55%;
 
+      @include md {
+        width: 100%;
+        text-align: center;
+        padding: 3.2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      @include sm {
+        padding: 0rem 2.4rem;
+      }
+
       h3 {
         font-weight: 600;
         font-size: 3.6rem;
         margin-bottom: 2.4rem;
+
+        @include sm {
+          font-size: 3.2rem;
+        }
       }
 
-      p {
+      .images__mobile {
+        display: none;
+
+        @include md {
+          display: initial;
+
+          .image__mobile {
+            position: relative;
+            height: 63.7rem;
+            width: 37rem;
+            margin-top: 5.5rem;
+
+            @include sm {
+              height: 40.8rem;
+              width: 23.7rem;
+            }
+
+            .image1__mobile,
+            .image2__mobile {
+              position: relative;
+              width: 21.9rem;
+              height: 23.1rem;
+              position: absolute;
+              transform: translate(-50%, -50%);
+
+              @include sm {
+                height: 14.8rem;
+                width: 14.1rem;
+              }
+            }
+
+            .image1__mobile {
+              top: 43%;
+              left: 18%;
+            }
+
+            .image2__mobile {
+              top: 28%;
+              right: -51%;
+            }
+
+            .image3__mobile {
+              position: relative;
+              width: 21.9rem;
+              height: 7.5rem;
+              position: absolute;
+              top: 72%;
+              left: 18%;
+              transform: translate(-50%, -50%);
+
+              @include sm {
+                width: 14.1rem;
+                height: 6rem;
+              }
+            }
+
+            .image4__mobile {
+              position: relative;
+              height: 11.3rem;
+              width: 11.3rem;
+              position: absolute;
+              top: 81%;
+              right: -22%;
+              transform: translate(-50%, -50%);
+
+              @include sm {
+                width: 6rem;
+                height: 6rem;
+                top: 69%;
+                right: -13%;
+              }
+            }
+          }
+        }
+      }
+
+      .p__desktop {
         margin-top: 6.4rem;
         font-size: 2.2rem;
         font-weight: 400;
-        line-height: 1.6;
+        line-height: 1.7;
         width: 90%;
         margin-bottom: 6.4rem;
+
+        @include sm {
+          margin: 3.2rem 0;
+        }
       }
 
-      .stores {
+      .stores__desktop {
         display: flex;
         margin-bottom: 4rem;
+
+        @include sm {
+          margin-bottom: 13.1rem;
+        }
 
         .store {
           position: relative;
@@ -60,6 +185,10 @@
       display: flex;
       align-items: center;
       justify-content: center;
+
+      @include md {
+        display: none;
+      }
 
       .image {
         position: relative;
@@ -106,17 +235,22 @@
         }
       }
     }
-
-    .hero__overlay {
-      position: absolute;
-      background-image: url("/landing/hero-background.png");
-      background-repeat: no-repeat;
-      width: 100%;
-      max-width: 1440px;
-      height: 100vh;
-      top: 0;
-      z-index: -10;
-      overflow: hidden;
-    }
+    // .hero__overlay__container {
+    //   position: relative;
+    //   width: 100%;
+    //   height: 800px;
+    //   border: 1px solid red;
+    //   z-index: -10;
+    //   top: 0;
+    //   overflow: hidden;
+    //   position: absolute;
+    //   .hero__overlay {
+    //     background-image: url("/landing/hero-background.png");
+    //     background-repeat: no-repeat;
+    //     height: 100%;
+    //     width: 100%;
+    //     position: absolute;
+    //   }
+    // }
   }
 }

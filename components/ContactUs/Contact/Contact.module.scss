@@ -1,15 +1,31 @@
 @import "../../../styles/variables.scss";
+@import "../../../styles/responsive.scss";
 
 .container {
   width: 100%;
   margin-bottom: 14.8rem;
   background-color: $bg-primary;
 
+  @include xl {
+    margin-bottom: 11rem;
+  }
+
   .contact {
     max-width: 1440px;
     margin: 0 auto;
     padding: 0 19.2rem;
     display: flex;
+
+    @include xl {
+      padding: 0 10rem;
+    }
+
+    @include md {
+      padding: 0 6rem;
+      flex-direction: column;
+      align-items: center;
+      gap: 10rem;
+    }
 
     &__links {
       width: 60%;
@@ -23,6 +39,10 @@
         align-items: center;
         gap: 1.6rem;
 
+        @include md {
+          flex-direction: column;
+        }
+
         p {
           font-size: 2.2rem;
           font-weight: 400;
@@ -34,6 +54,10 @@
       width: 37.8rem;
       height: 63.1rem;
       position: relative;
+
+      @include lg {
+        height: 55rem;
+      }
     }
   }
 }

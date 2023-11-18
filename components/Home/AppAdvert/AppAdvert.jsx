@@ -5,9 +5,6 @@ const AppAdvert = () => {
   return (
     <section className={styles.advert__container}>
       <div className={styles.advert}>
-        <div className={styles.overlay__left}></div>
-        <div className={styles.overlay__right}></div>
-        <div></div>
         <div className={styles.advert__inner}>
           <h3>Ready to simplify your laundry routine?</h3>
           <p>

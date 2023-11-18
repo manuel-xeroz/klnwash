@@ -16,11 +16,39 @@ const Hero = () => {
             height={19}
             width={221}
           />
-          <p>
+
+          <div className={styles.images__mobile}>
+            <div className={styles.image__mobile}>
+              <Image src="/landing/hero-phone.png" alt="phone" fill />
+
+              <div className={styles.image1__mobile}>
+                <Image src="/landing/washing.png" alt="phone" fill />
+              </div>
+
+              <div className={styles.image2__mobile}>
+                <Image src="/landing/clothe.png" alt="phone" fill />
+              </div>
+
+              <div className={styles.image3__mobile}>
+                <Image src="/landing/chart.png" alt="chart" fill />
+              </div>
+
+              <div className={styles.image4__mobile}>
+                <Image
+                  src="/landing/shield.png"
+                  alt="shield"
+                  height={100}
+                  width={100}
+                />
+              </div>
+            </div>
+          </div>
+
+          <p className={styles.p__desktop}>
             Laundry is done your way. Delivered the next day. Pickup and
             Delivery with Kln Wash.
           </p>
-          <div className={styles.stores}>
+          <div className={styles.stores__desktop}>
             <div className={styles.store}>
               <Image
                 src="/landing/apple.png"
@@ -67,8 +95,6 @@ const Hero = () => {
             </div>
           </div>
         </div>
-
-        <div className={styles.hero__overlay}></div>
       </div>
     </section>
   );

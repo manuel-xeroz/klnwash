@@ -8,12 +8,13 @@ const FaqHero = () => {
         <div className={styles.texts}>
           <h3>Frequently Asked</h3>
           <h3 className={styles.questions}>Questions</h3>
+          <div className={styles.zigzag}>
           <Image
             src="/landing/zigzag.png"
             alt="design"
-            height={19}
-            width={229}
+            fill
           />
+          </div>
         </div>
         <div className={styles.image}>
           <Image
