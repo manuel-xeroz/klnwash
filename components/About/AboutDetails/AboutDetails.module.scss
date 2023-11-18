@@ -19,6 +19,10 @@
       padding: 0 6rem;
     }
 
+    @include sm {
+      padding: 0 2.4rem;
+    }
+
     .detail__top {
       display: flex;
       flex-direction: column;
@@ -60,6 +64,10 @@
             font-weight: 400;
             font-size: 2.2rem;
             margin-bottom: 2.4rem;
+
+            @include sm {
+              font-size: 2rem;
+            }
           }
         }
 
@@ -69,10 +77,15 @@
 
           @include md {
             display: block;
-align-items: center;
-margin: auto;
+            align-items: center;
+            margin: auto;
             height: 60.8rem;
             width: 48rem;
+          }
+
+          @include sm {
+            height: 40rem;
+            width: 31.5rem;
           }
         }
 
@@ -93,6 +106,10 @@ margin: auto;
       font-size: 2.2rem;
       font-weight: 400;
       margin-bottom: 2.4rem;
+
+      @include sm {
+        font-size: 2rem;
+      }
     }
 
     h3 {
@@ -115,6 +132,10 @@ margin: auto;
         font-size: 3.2rem;
         font-weight: 500;
         margin-bottom: 2.4rem;
+
+        @include sm {
+          text-align: center;
+        }
       }
     }
   }

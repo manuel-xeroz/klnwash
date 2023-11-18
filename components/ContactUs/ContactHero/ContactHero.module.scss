@@ -33,6 +33,11 @@
       gap: 3.2rem;
     }
 
+    @include sm {
+      margin: 0 2.4rem;
+      border-radius: 3.2rem;
+    }
+
     &__left {
 
       @include md {
@@ -88,6 +93,11 @@
         @include lg {
           left: -5%;
         }
+
+        @include sm {
+          width: 28rem;
+          left: 0;
+        }
       }
 
       .call {
@@ -101,6 +111,11 @@
 
         @include lg {
           left: -1%;
+        }
+
+        @include sm {
+          left: 25px;
+
         }
       }
 

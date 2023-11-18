@@ -20,10 +20,12 @@ const Navbar = () => {
   const handleStyle = () => {
     setClick(false);
   };
-  
+
   return (
     <header className={styles.header__container}>
-      <div className={styles.header}>
+      <div
+        className={styles.header}
+      >
         <Link href="/" className={styles.header__brand}>
           <div className={styles.logo__container}>
             <Image

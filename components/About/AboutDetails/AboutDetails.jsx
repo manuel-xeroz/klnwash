@@ -98,7 +98,7 @@ const AboutDetails = () => {
             src="/about/tree.png"
             alt="tree"
             height={215}
-            width={212}
+            width={287}
             className={styles.tree}
           />
           <h3 className={styles.aboutUs__header}>Environmental impact</h3>

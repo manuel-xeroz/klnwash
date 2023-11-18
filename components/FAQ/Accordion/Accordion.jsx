@@ -11,11 +11,11 @@ const Accordion = () => {
       {FAQ.map(({ id, question, answer }) => (
         <div className={styles.accordion} key={id}>
           <div className={styles.question} onClick={() => setFaq(id)}>
-            <div className={styles.sign}>
+            <div className={styles.signs}>
               {faq === id ? (
-                <Image src="/faq/minus-circle.png" alt="minus" fill />
+                <Image src="/faq/minus-circle.png" className={styles.sign} alt="minus" height={40} width={40} />
               ) : (
-                <Image src="/faq/plus-circle.png" alt="plus" fill />
+                <Image src="/faq/plus-circle.png" className={styles.sign} alt="plus" height={40} width={40} />
               )}
             </div>
 
