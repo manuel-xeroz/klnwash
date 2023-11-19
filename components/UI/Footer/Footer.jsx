@@ -32,6 +32,7 @@ const Footer = () => {
                   src="/landing/apple.png"
                   alt="apple store"
                   fill
+                  className={styles.os_image}
                 />
               </div>
 
@@ -40,6 +41,7 @@ const Footer = () => {
                   src="/landing/playstore.png"
                   alt="play store"
                   fill
+                  className={styles.os_image}
                 />
               </div>
             </div>

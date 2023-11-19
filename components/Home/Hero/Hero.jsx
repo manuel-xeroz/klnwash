@@ -46,7 +46,7 @@ const Hero = () => {
 
           <p className={styles.p__desktop}>
             Laundry is done your way. Delivered the next day. Pickup and
-            Delivery with Kln Wash.
+            Delivery with Klnwash.
           </p>
           <div className={styles.stores__desktop}>
             <div className={styles.store}>

@@ -1,5 +1,8 @@
 @import "../styles/variables.scss";
 @import '../styles/responsive.scss';
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Urbanist:wght@200;400;600&display=swap');
+
+
 
 *,
 *::after,
@@ -34,6 +37,8 @@ html,
 body {
   box-sizing: border-box;
   overflow-x: hidden;
+  font-family: 'Space Grotesk', sans-serif;
+  font-family: 'Urbanist', sans-serif;
 }
 
 a,
